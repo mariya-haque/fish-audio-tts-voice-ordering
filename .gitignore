@@ -1,0 +1,43 @@
+# --- Secrets ------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Postman exports carry live ApiKeys, bearer GUIDs and session cookies.
+SpeedoyCollection*.json
+*.postman_collection*.json
+
+# --- Python -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# --- Generated data -----------------------------------------------------------
+# Chroma index (rebuild with `python -m rag.ingest`), sample voices and
+# smoke-test audio. All regenerated on demand.
+data/
+chroma_db/
+*.sqlite3
+*.db
+
+# Audio produced by the scripts
+*.wav
+*.pcm
+*.mp3
+
+# --- Logs ---------------------------------------------------------------------
+*.log
+logs/
+
+# --- Node (not used, but harmless) --------------------------------------------
+node_modules/
+dist/
+
+# --- OS / editors -------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
